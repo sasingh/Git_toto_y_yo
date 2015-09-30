@@ -1,0 +1,26 @@
+#!/bin/bash
+#PBS -N fdelmod
+#PBS -q verylong
+#PBS -l nodes=7
+#PBS -k eo
+#PBS -j eo
+
+#sfsuread <vel_x0_ru.su tfile=tfile.rsf endian=0>avelu1.rsf
+#sfsuread <udir_x0_ru.su tfile=tfile.rsf endian=0>adiru1.rsf
+#sfsuread <pavel_x0_rp.su tfile=tfile.rsf endian=0>avelp1.rsf
+#sfsuread <padir_x0_rp.su tfile=tfile.rsf endian=0>adirp1.rsf
+
+#sfsuread<pfar_x0_rvz.su tfile=tfile.rsf endian=0>farrival.rsf
+#sfsuread<pref_x0_rvz.su tfile=tfile.rsf endian=0>reference.rsf
+#sfsuread<pasurf_cp.su tfile=tfile.rsf endian=0|sfwindow n2=501 f2=50>vel.rsf
+#sfsuread<pasurf_ro.su tfile=tfile.rsf endian=0|sfwindow n2=501 f2=50>rho.rsf
+#sfsuread<pasurf_cp.su tfile=tfile.rsf endian=0|sfput d1=1>vel.rsf
+
+
+#fmute file_shot=pfar_x0_rp.su file_out=fa.su above=-1 shift=-70 verbose=1 check=1 hw=4
+
+
+#sfsuread<fa.su tfile=tfile.rsf endian=0>fa.rsf
+#sfsuread<pfar_x0_rp.su tfile=tfile.rsf endian=0>reference.rsf
+sfsuread<snap_sp.su tfile=tfile.rsf endian=0>wavefield.rsf
+

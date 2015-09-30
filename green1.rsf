@@ -1,0 +1,21 @@
+1.6-svn	sfsuread	Vel_inversion_direct/DirectInversion/blind:	satyan@satyan-M14xR2	Tue Sep 29 17:37:59 2015
+
+	d2=1
+	o1=0
+	n2=48076
+	o2=0
+	label1="Time"
+	data_format="native_float"
+	head="tfile.rsf"
+	label2="Trace"
+	esize=4
+	in="/var/tmp/wavefield.rsf@"
+	unit1="s"
+	d1=0.001
+	n1=166
+1.6-svn	sfput	Vel_inversion_direct/DirectInversion/blind:	satyan@satyan-M14xR2	Tue Sep 29 17:39:34 2015
+
+	data_format="native_float"
+	n2=101
+	in="/var/tmp/green1.rsf@"
+	n3=476
